@@ -1,6 +1,6 @@
 {
   "name": "partial-application-tree",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "main": "lib/index.js",
   "jsnext:main": "lib/index.js",
   "repository": "git@github.com:team-griffin/partial-application-tree.git",
