@@ -76,4 +76,36 @@ describe('pat', function() {
 
     expect(out.root()).to.eql('foobarbaz');
   });
+
+  describe('debugging', function() {
+    it('throws an error when function is not a function', function() {
+      const badFn = () => pat([
+        ['node', ['leaf']],
+      ], {
+        leaf: () => 'foo',
+      });
+
+      expect(badFn).to.throw('Function [node] not found in graph');
+    });
+
+    it('throws an error when the dependency is empty', function() {
+      const badFn = () => pat([
+        ['node', ['']],
+      ], {
+        node: () => 'foo',
+      });
+
+      expect(badFn).to.throw('Empty path at index [0] for [node]');
+    });
+
+    it('throws an error when the dependency is not in the graph', function() {
+      const badFn = () => pat([
+        ['node', ['leaf']],
+      ], {
+        node: () => 'foo',
+      });
+
+      expect(badFn).to.throw('Dependency [leaf] for [node] not found in graph');
+    });
+  });
 });

@@ -20,6 +20,7 @@
     "dockerfile:ci": "dockerscript ./docker/ci/dockerfile.js ./docker/ci/Dockerfile"
   },
   "dependencies": {
+    "invariant": "^2.2.2",
     "lodash.topath": "^4.5.2",
     "ramda": "^0.24.1"
   },
