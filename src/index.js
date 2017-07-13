@@ -9,6 +9,7 @@ const edgeToTransformation = ([fRawPath, depRawPaths]) => {
   const fLens = r.lensPath(fPath);
   
   return (graph) => {
+    // Start of debug
     if(process.env.NODE_ENV !== 'production') {
       // Util functions we will need but only in non-prod
       const isPopulated = r.complement(r.isEmpty);
@@ -42,10 +43,11 @@ const edgeToTransformation = ([fRawPath, depRawPaths]) => {
         );
       })(depPaths);
 
-      return r.over(fLens, (f) => {
-        return r.partial(f, paths(depPaths, graph));
-      }, graph);
     }
+    // End of debug
+    return r.over(fLens, (f) => {
+      return r.partial(f, paths(depPaths, graph));
+    }, graph);
   };
 };
 
