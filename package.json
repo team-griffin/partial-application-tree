@@ -1,6 +1,6 @@
 {
   "name": "partial-application-tree",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "lib/index.js",
   "jsnext:main": "lib/index.js",
   "repository": "git@github.com:team-griffin/partial-application-tree.git",
@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "invariant": "^2.2.2",
-    "lodash.topath": "^4.5.2",
     "ramda": "^0.25.0"
   },
   "devDependencies": {
@@ -31,9 +30,7 @@
     "babel-loader": "^7.1.2",
     "babel-plugin-istanbul": "^4.1.4",
     "babel-plugin-ramda": "^1.4.3",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-preset-stage-0": "^6.5.0",
+    "babel-preset-env": "^1.6.1",
     "chai": "^4.0.2",
     "cross-env": "^5.0.1",
     "dockerscript": "^0.0.6",
@@ -44,8 +41,7 @@
   },
   "nyc": {
     "require": [
-      "babel-register",
-      "babel-polyfill"
+      "babel-register"
     ],
     "sourceMap": false,
     "instrument": false,

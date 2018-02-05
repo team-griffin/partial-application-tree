@@ -1,13 +1,17 @@
-import toPath from 'lodash.topath';
 import * as r from 'ramda';
 import paths from './paths';
 import invariant from 'invariant';
+
+const toPath = r.pipe(
+  r.split(/[^\w\d]+/g),
+  r.reject(r.isEmpty),
+);
 
 const edgeToTransformation = ([fRawPath, depRawPaths]) => {
   const fPath = toPath(fRawPath);
   const depPaths = r.map(toPath, depRawPaths);
   const fLens = r.lensPath(fPath);
-  
+
   return (graph) => {
     // Start of debug
     if(process.env.NODE_ENV !== 'production') {

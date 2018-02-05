@@ -1,6 +1,23 @@
 {
-  "presets": ["es2015", "stage-0"],
-  "plugins": ["ramda"],
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "safari >= 7"
+          ],
+        },
+        "modules": "commonjs",
+        "useBuiltIns": "usage",
+      }
+    ]
+  ],
+
+  "plugins": [
+    "ramda"
+  ],
   "env": {
     "test": {
       "plugins": ["istanbul"]
