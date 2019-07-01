@@ -1,6 +1,6 @@
 {
   "name": "partial-application-tree",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "main": "dist/cjs/partial-application-tree.js",
   "module": "dist/es/partial-application-tree.js",
   "repository": "git@github.com:team-griffin/partial-application-tree.git",
@@ -32,7 +32,6 @@
     "babel-eslint": "^8.0.3",
     "babel-loader": "^7.1.2",
     "babel-plugin-istanbul": "^4.1.4",
-    "babel-plugin-ramda": "^1.4.3",
     "babel-preset-env": "^1.6.1",
     "babel-plugin-external-helpers": "^6.22.0",
     "chai": "^4.0.2",

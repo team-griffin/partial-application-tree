@@ -15,9 +15,6 @@
     ]
   ],
 
-  "plugins": [
-    "ramda"
-  ],
   "env": {
     "test": {
       "plugins": ["istanbul"]
